@@ -142,3 +142,29 @@ let currentPage = 'home';
             }
         `;
         document.head.appendChild(fadeStyle);
+        
+        
+        const images = document.getElementById('carousel-images');
+  let index = 0;
+
+  function showImage() {
+    images.style.transform = `translateX(${-500 * index}px)`;
+  }
+
+  function nextImage() {
+    if (index < images.children.length - 1) {
+      index++;
+    } else {
+      index = 0;
+    }
+    showImage();
+  }
+
+  function prevImage() {
+    if (index > 0) {
+      index--;
+    } else {
+      index = images.children.length - 1;
+    }
+    showImage();
+  }
