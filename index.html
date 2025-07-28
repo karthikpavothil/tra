@@ -7,8 +7,43 @@
     
     <link rel="stylesheet" href="templatemo-glossy-touch.css">
     <style>
-        
-    </style>
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    button {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
     <div class="bg-shapes">
@@ -44,17 +79,21 @@
                             <circle cx="40" cy="40" r="1" opacity="0.6"/>
                         </svg>
                     </div>
-                    <span>Thamaramkulangara Residence Association</span>
+                    <span style="font-size: 35px;font-family: 'Brush Script MT', cursive;">Thamaramkulangara Residence Association</span>
                 </div>
                 <div class="nav-links">
                     <a href="#" onclick="showPage('home')" class="active">Home</a>
                     <a href="#" onclick="showPage('about')">About</a>
-                    <a href="#" onclick="showPage('services')">Services</a>
-                    <a href="#" onclick="showPage('contact')">Contact</a>
+                    <a href="#" onclick="showPage('gallery')">Gallery</a>
+                    <a href="#" onclick="showPage('team')">Team</a>
+                    <a href="#" onclick="showPage('updates')">News & Updates</a>
+                    <a href="#" onclick="showPage('contact')">Contact Us</a>
                 </div>
             </nav>
         </div>
     </header>
+
+
 
     <!-- HOME PAGE -->
     <div id="home" class="page active">
@@ -65,8 +104,8 @@
                         <img src="images/templatemo-futuristic-girl.jpg" alt="Modern Technology Interaction" />
                     </div>
                     <div class="hero-content">
-                        <h1>Welcome to the Future</h1>
-                        <p>Experience cutting-edge glass morphism design that brings depth and elegance to modern web interfaces. Clean, translucent, and beautifully interactive.</p>
+                        <h1>Welcome to TRA</h1>
+                        <p>Building a Stronger Community Together</p>
                         <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
                     </div>
                 </section>
@@ -74,39 +113,40 @@
                 <section class="features">
                     <div class="feature-card glass">
                         <div class="feature-icon">✨</div>
-                        <h3>Modern Design</h3>
-                        <p>Beautiful glass morphism effects with backdrop blur and translucent elements that create depth and visual hierarchy.</p>
+                        <h3>Community Engagement</h3>
+                        <p>Organise social and cultural events for residents to come together and build lasting relationships.</p>
                     </div>
                     
                     <div class="feature-card glass">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Fast Performance</h3>
-                        <p>Optimized animations and effects that maintain smooth 60fps performance across all modern browsers and devices.</p>
+                        <div class="feature-icon">✨</div>
+                        <h3>Safety and Security</h3>
+                        <p>Enhance the safety and security of our neighbourhood through joint initiatives and vigilance.</p>
                     </div>
                     
                     <div class="feature-card glass">
-                        <div class="feature-icon">📱</div>
-                        <h3>Responsive</h3>
-                        <p>Fully responsive design that adapts beautifully to any screen size, from mobile phones to desktop displays.</p>
+                        <div class="feature-icon">✨</div>
+                        <h3>Environmental Sustainability</h3>
+                        <p>Promote eco-friendly practices and maintain green spaces for the well-being of our community.</p>
                     </div>
+                    <div></div>
 
                     <div class="feature-card glass">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Interactive UI</h3>
-                        <p>Engaging hover effects, smooth transitions, and micro-animations that create delightful user experiences.</p>
+                        <div class="feature-icon">✨</div>
+                        <h3>Infrastructure Development</h3>
+                        <p>Collaborate with local authorities to improve and maintain infrastructure like roads, water supply, and waste management.</p>
                     </div>
 
-                    <div class="feature-card glass">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Secure & Safe</h3>
-                        <p>Built with modern security standards and best practices to ensure your data and user privacy are protected.</p>
-                    </div>
+                    <!--<div class="carousel">
+  						<div class="carousel-images" id="carousel-images">
+    						<img src="images/templatemo-futuristic-girl.jpg" alt="Image 1"/>
+    						<img src="images/1000467478.jpg" alt="Image 3"/>
+  						</div>
+  						<div class="buttons">
+    						<button onclick="prevImage()">&#10094;</button>
+    						<button onclick="nextImage()">&#10095;</button>
+  						</div>
+					</div>-->
 
-                    <div class="feature-card glass">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Easy Integration</h3>
-                        <p>Simple to implement and customize for any project with clean, well-documented code and flexible components.</p>
-                    </div>
                 </section>
             </div>
         </div>
@@ -118,39 +158,56 @@
             <div class="content-wrapper">
                 <section class="about-content">
                     <div class="about-text glass">
-                        <h2>About Our Vision</h2>
-                        <p>We believe in creating digital experiences that feel natural and intuitive. Our glass morphism design philosophy combines transparency, depth, and subtle animations to create interfaces that users love to interact with.</p>
-                        <p>Founded in 2024, our team of designers and developers are passionate about pushing the boundaries of web design while maintaining accessibility and performance standards.</p>
-                        <p>Every project we undertake is crafted with attention to detail, ensuring that form follows function while never compromising on aesthetic beauty.</p>
+                        <h2>About Us</h2>
+                        <p>Thamaramkulangara Residence Association (TRA) was formed in 2019 by residents of the Thamaramkulangara neighborhood, adjacent to the historic Thamaramkulangara Sree Dharmasastha Temple in Tripunithura, Ernakulam</p>
+                        <p>The Thamaramkulangara Residence Association (TRA) is a community-driven organization dedicated to fostering a spirit of cooperation, support, and development for the residents of Thamaramkulangara. Our mission is to create a harmonious living environment through collective efforts, effective communication, and mutual respect among all members of the association.</p>
                     </div>
-                    <div class="stats">
-                        <div class="stat-card glass">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Support Available</div>
-                        </div>
+                    <div class="about-text glass">
+                        <h2>Objective</h2>
+                        <p><strong>Community Engagement</strong> : Organise social and cultural events for residents to come together and build lasting relationships.</p>
+                        <p><strong>Safety and Security</strong> : Enhance the safety and security of our neighbourhood through joint initiatives and vigilance.</p>
+                        <p><strong>Environmental Sustainability</strong> : Promote eco-friendly practices and maintain green spaces for the well-being of our community.</p>
+                        <p><strong>Infrastructure Development</strong> : Collaborate with local authorities to improve and maintain infrastructure like roads, water supply, and waste management.</p>
                     </div>
                 </section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="about-content">
+                    <div class="about-text glass">
+                        <h2>About Us</h2>
+                        <p>Thamaramkulangara Residence Association (TRA) was formed in 2019 by residents of the Thamaramkulangara neighborhood, adjacent to the historic Thamaramkulangara Sree Dharmasastha Temple in Tripunithura, Ernakulam</p>
+                        <p>The Thamaramkulangara Residence Association (TRA) is a community-driven organization dedicated to fostering a spirit of cooperation, support, and development for the residents of Thamaramkulangara. Our mission is to create a harmonious living environment through collective efforts, effective communication, and mutual respect among all members of the association.</p>
+                    </div>
+                    <div class="about-text glass">
+                        <h2>Objective</h2>
+                        <p><strong>Community Engagement</strong> : Organise social and cultural events for residents to come together and build lasting relationships.</p>
+                        <p><strong>Safety and Security</strong> : Enhance the safety and security of our neighbourhood through joint initiatives and vigilance.</p>
+                        <p><strong>Environmental Sustainability</strong> : Promote eco-friendly practices and maintain green spaces for the well-being of our community.</p>
+                        <p><strong>Infrastructure Development</strong> : Collaborate with local authorities to improve and maintain infrastructure like roads, water supply, and waste management.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- TEAM PAGE -->
+    <div id="team" class="page">
+        <div class="container">
 
                 <section class="team-section">
                     <h2>Meet Our Team</h2>
                     <div class="team-grid">
                         <div class="team-member glass">
                             <div class="team-avatar">👨‍💼</div>
-                            <h3>John Anderson</h3>
-                            <p class="role">CEO & Founder</p>
-                            <p class="bio">Visionary leader with 15+ years in digital innovation, driving our mission to create exceptional user experiences.</p>
+                            <h3>Dr. MK Muraleedharan Nair</h3>
+                            <p class="role">President</p>
+                            <p class="bio">9447389926</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -158,10 +215,10 @@
                             </div>
                         </div>
                         <div class="team-member glass">
-                            <div class="team-avatar">👩‍🎨</div>
-                            <h3>Sarah Chen</h3>
-                            <p class="role">Creative Director</p>
-                            <p class="bio">Award-winning designer specializing in modern UI/UX, bringing artistic vision to every project.</p>
+                            <div class="team-avatar">👨‍💼</div>
+                            <h3>Sadasivan Pillai</h3>
+                            <p class="role">Vice President</p>
+                            <p class="bio">9446720871</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -169,10 +226,10 @@
                             </div>
                         </div>
                         <div class="team-member glass">
-                            <div class="team-avatar">👨‍💻</div>
-                            <h3>Michael Torres</h3>
-                            <p class="role">Lead Developer</p>
-                            <p class="bio">Full-stack expert passionate about clean code and innovative web technologies.</p>
+                            <div class="team-avatar">👩‍💼</div>
+                            <h3>Prathiba Krishnakumar</h3>
+                            <p class="role">Vice President</p>
+                            <p class="bio">9747480888</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -180,10 +237,10 @@
                             </div>
                         </div>
                         <div class="team-member glass">
-                            <div class="team-avatar">👩‍💻</div>
-                            <h3>Emma Wilson</h3>
-                            <p class="role">Senior Developer</p>
-                            <p class="bio">Frontend specialist with expertise in React and modern JavaScript frameworks.</p>
+                           <div class="team-avatar">👨‍💼</div>
+                            <h3>Santhosh Kumar</h3>
+                            <p class="role">Secretary</p>
+                            <p class="bio">9847512595</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -191,10 +248,10 @@
                             </div>
                         </div>
                         <div class="team-member glass">
-                            <div class="team-avatar">👨‍🎨</div>
-                            <h3>David Kim</h3>
-                            <p class="role">UX Designer</p>
-                            <p class="bio">User experience expert focused on creating intuitive and accessible digital products.</p>
+                            <div class="team-avatar">👨‍💼</div>
+                            <h3>Sreejith VS</h3>
+                            <p class="role">Joint Secretary</p>
+                            <p class="bio">9946622922</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -202,10 +259,10 @@
                             </div>
                         </div>
                         <div class="team-member glass">
-                            <div class="team-avatar">👩‍💼</div>
-                            <h3>Lisa Martinez</h3>
-                            <p class="role">Project Manager</p>
-                            <p class="bio">Certified PMP with a track record of delivering complex projects on time and budget.</p>
+                            <div class="team-avatar">👨‍💼</div>
+                            <h3>Anil Kumar</h3>
+                            <p class="role">Treasurer</p>
+                            <p class="bio">9846689350</p>
                             <div class="team-social">
                                 <a href="#" title="Email">📧</a>
                                 <a href="#" title="LinkedIn">💼</a>
@@ -219,98 +276,42 @@
     </div>
 
     <!-- SERVICES PAGE -->
-    <div id="services" class="page">
+    <div id="updates" class="page">
         <div class="container">
             <div class="content-wrapper">
                 <section class="hero glass">
-                    <h1>Our Services</h1>
-                    <p>Comprehensive design and development solutions tailored to your needs</p>
+                    <h1>News & Updates</h1>
+                    <p>Latest News and upcoming events</p>
                 </section>
 
                 <section class="services-grid">
                     <div class="service-card glass">
                         <div class="service-header">
                             <div class="service-icon">🎨</div>
-                            <h3>UI/UX Design</h3>
+                            <h3>Upcoming Events</h3>
                         </div>
-                        <p>Create stunning user interfaces with modern design principles, focusing on usability and aesthetic appeal.</p>
                         <ul class="service-features">
-                            <li>User Research & Analysis</li>
-                            <li>Wireframing & Prototyping</li>
-                            <li>Visual Design & Branding</li>
-                            <li>Responsive Design</li>
+                            <li>September 7th 2025 - Onam Celebration</li>
                         </ul>
                     </div>
 
                     <div class="service-card glass">
                         <div class="service-header">
-                            <div class="service-icon">💻</div>
-                            <h3>Web Development</h3>
+                             <div class="service-icon">🎨</div>
+                            <h3>Notices</h3>
                         </div>
-                        <p>Build fast, secure, and scalable websites using the latest web technologies and best practices.</p>
-                        <ul class="service-features">
-                            <li>Frontend Development</li>
-                            <li>Backend Integration</li>
-                            <li>Performance Optimization</li>
-                            <li>SEO Implementation</li>
-                        </ul>
+                        <p>Stay updated on important announcements, maintenance schedules, and neighborhood alerts.</p>
                     </div>
 
                     <div class="service-card glass">
                         <div class="service-header">
-                            <div class="service-icon">📱</div>
-                            <h3>Mobile Apps</h3>
+                            <div class="service-icon">🎨</div>
+                            <h3>Newsletters</h3>
                         </div>
-                        <p>Develop native and cross-platform mobile applications that deliver exceptional user experiences.</p>
-                        <ul class="service-features">
-                            <li>iOS & Android Development</li>
-                            <li>Cross-platform Solutions</li>
-                            <li>App Store Optimization</li>
-                            <li>Maintenance & Updates</li>
-                        </ul>
+                        <p>Access our monthly newsletters to learn more about recent activities and future plans.</p>
                     </div>
 
-                    <div class="service-card glass">
-                        <div class="service-header">
-                            <div class="service-icon">🚀</div>
-                            <h3>Digital Strategy</h3>
-                        </div>
-                        <p>Strategic consulting to help your business thrive in the digital landscape with data-driven insights.</p>
-                        <ul class="service-features">
-                            <li>Digital Transformation</li>
-                            <li>Analytics & Reporting</li>
-                            <li>Growth Strategy</li>
-                            <li>Technology Consulting</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card glass">
-                        <div class="service-header">
-                            <div class="service-icon">☁️</div>
-                            <h3>Cloud Solutions</h3>
-                        </div>
-                        <p>Modernize your infrastructure with scalable cloud services and seamless migration strategies.</p>
-                        <ul class="service-features">
-                            <li>Cloud Migration</li>
-                            <li>DevOps & Automation</li>
-                            <li>Infrastructure as Code</li>
-                            <li>24/7 Monitoring</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card glass">
-                        <div class="service-header">
-                            <div class="service-icon">🔐</div>
-                            <h3>Cybersecurity</h3>
-                        </div>
-                        <p>Protect your digital assets with comprehensive security solutions and threat protection.</p>
-                        <ul class="service-features">
-                            <li>Security Auditing</li>
-                            <li>Penetration Testing</li>
-                            <li>Data Protection</li>
-                            <li>Compliance Management</li>
-                        </ul>
-                    </div>
+                    
                 </section>
             </div>
         </div>
@@ -351,7 +352,7 @@
                             <div class="contact-item-icon">📧</div>
                             <div class="contact-item-text">
                                 <h4>Email</h4>
-                                <p>hello@glossytouch.com</p>
+                                <p>tratripunithura2019@gmail.com</p>
                             </div>
                         </div>
 
@@ -359,7 +360,7 @@
                             <div class="contact-item-icon">📞</div>
                             <div class="contact-item-text">
                                 <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>0484-2222222</p>
                             </div>
                         </div>
 
@@ -367,17 +368,10 @@
                             <div class="contact-item-icon">📍</div>
                             <div class="contact-item-text">
                                 <h4>Address</h4>
-                                <p>123 Design Street<br>Creative District, CD 12345</p>
+                                <p>Thamaramkulangara, <br>Tripunithura</br>Ernakulam, <br>682301</br></p>
                             </div>
                         </div>
 
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🕒</div>
-                            <div class="contact-item-text">
-                                <h4>Business Hours</h4>
-                                <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: 10AM-4PM</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
@@ -385,21 +379,42 @@
                     <div class="contact-map glass">
                         <h2>Find Us</h2>
                         <div class="map-container">
-                            <div class="map-placeholder">
-                                <div class="map-placeholder-icon">🗺️</div>
-                                <p><strong>Interactive Map Area</strong></p>
-                                <p>123 Design Street</p>
-                                <p>Creative District, CD 12345</p>
-                                <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">
-                                    Map integration can be added with<br>
-                                    Google Maps, OpenStreetMap, or Mapbox
-                                </p>
-                            </div>
+                            <iframe
+  								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7873254549727!2d76.3359683748322!3d9.9516451901513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0872cb7a9ceb97%3A0xca52c1cf661b0628!2sThamaramkulangara%20Sree%20Dharmasastha%20Temple!5e0!3m2!1sen!2sin!4v1753692872046!5m2!1sen!2sin"
+  								width="1400"
+  								height="500"
+  								style="border:0;"
+  								allowfullscreen=""
+  								loading="lazy"
+  								referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+    </div>
+    
+   
+    <div id="gallery" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="carousel">
+  						<div class="carousel-images" id="carousel-images">
+    						<img src="images/1.jpg" alt="Image 1"/>
+    						<img src="images/2.jpg" alt="Image 3"/>
+  						</div>
+  						<div class="buttons">
+    						<button onclick="prevImage()">&#10094;</button>
+    						<button onclick="nextImage()">&#10095;</button>
+  						</div>
+					</div>
+                </section>
+
+            </div>
+        </div>
+        
     </div>
 
     <!-- SINGLE FOOTER -->
@@ -411,17 +426,17 @@
                         <a href="#" onclick="showPage('about')">About Us</a>
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
-                        <a href="#">XML Sitemap</a>
                         <a href="#" onclick="showPage('contact')">Contact</a>
                     </div>
                     <div class="copyright">
                         &copy; 2025 Thamaramkulangara Residence Association. All rights reserved.
-                        Provided by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-<script src="templatemo-glossy-touch.js"></script>
+<script src="templatemo-glossy-touch.js">
+
+</script>
 </body>
 </html>
