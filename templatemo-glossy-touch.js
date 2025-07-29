@@ -144,27 +144,21 @@ let currentPage = 'home';
         document.head.appendChild(fadeStyle);
         
         
-        const images = document.getElementById('carousel-images');
-  let index = 0;
+        let currentIndex = 0;
+const images = document.querySelectorAll('#carousel-images img');
+const totalImages = images.length;
 
-  function showImage() {
-    images.style.transform = `translateX(${-500 * index}px)`;
-  }
+function showImage(index) {
+    const carouselImages = document.getElementById('carousel-images');
+    carouselImages.style.transform = `translateX(-${index * 100}%)`; // Slide images
+}
 
-  function nextImage() {
-    if (index < images.children.length - 1) {
-      index++;
-    } else {
-      index = 0;
-    }
-    showImage();
-  }
+function nextImage() {
+    currentIndex = (currentIndex + 1) % totalImages; // Loop back to 0
+    showImage(currentIndex);
+}
 
-  function prevImage() {
-    if (index > 0) {
-      index--;
-    } else {
-      index = images.children.length - 1;
-    }
-    showImage();
-  }
+function prevImage() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image
+    showImage(currentIndex);
+}
