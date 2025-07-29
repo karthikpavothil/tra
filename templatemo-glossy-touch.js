@@ -120,7 +120,7 @@ let currentPage = 'home';
                 z-index: 10000;
                 animation: fadeIn 0.3s ease;
             `;
-            successMsg.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+            successMsg.textContent = 'Sorry for the incovinience, there is some issue in submitting reponse! Please send an email';
             
             document.body.appendChild(successMsg);
             
